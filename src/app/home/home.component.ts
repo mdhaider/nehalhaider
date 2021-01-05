@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from '../posts.service';
 
 
 @Component({
@@ -9,28 +8,9 @@ import { PostsService } from '../posts.service';
 })
 export class HomeComponent implements OnInit {
 
-  data:any;
- 
-//   afuConfig = {
-//     uploadAPI: {
-//       url:"https://example-file-upload-api"
-//     }
-// };
-
-  constructor(private posts:PostsService) { }
+  constructor() { }
 
   ngOnInit() {
-   this.posts.getPosts().subscribe({
-    next: (result: any) => {
-      this.data=result;
-    console.log("result",result);
-    },
-    error: (err: any) => {
-    console.log(err);
-    },
-    complete: () => {
-    console.log('complete');
-    }
-    });
+   
   }
 }
