@@ -4,9 +4,7 @@ import { LearningsService } from '../learnings.service';
 import { LearnRequest } from '../models/LearnRequest';
 
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { MatChipInputEvent } from '@angular/material/chips';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Pdf } from '../models/Pdf';
 
 export interface Subject {
   name: string;
@@ -26,7 +24,6 @@ export class UploadComponent {
   removable = true;
   addOnBlur = true;
   myForm!: FormGroup;
-  @ViewChild('chipList', { static: true }) chipList: any;
   GradeArray: any = [
     '8th Grade',
     '9th Grade',
@@ -36,21 +33,6 @@ export class UploadComponent {
   ];
   SubjectsArray: Subject[] = [];
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
-
-  saveData() {
-    this.learning.saveLearnings(this.req).subscribe({
-      next: (result: any) => {
-        console.log(result);
-        console.log('result', result);
-      },
-      error: (err: any) => {
-        console.log(err);
-      },
-      complete: () => {
-        console.log('complete');
-      },
-    });
-  }
 
   constructor(private learning: LearningsService, public fb: FormBuilder) {}
 
@@ -78,13 +60,22 @@ export class UploadComponent {
       next: (result: any) => {
         console.log(result);
         console.log('result', result);
+        this.reset();
       },
       error: (err: any) => {
         console.log(err);
+        this.reset();
       },
       complete: () => {
         console.log('complete');
+        this.reset();
       },
     });
   }
+
+  reset(){
+    this.myForm.reset();
+  
+  }
 }
+
