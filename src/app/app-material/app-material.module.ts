@@ -17,7 +17,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -40,7 +41,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatChipsModule,
     MatTooltipModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FlexLayoutModule,
+    MatCardModule
   ],
   exports:[
     MatButtonModule,
@@ -58,7 +61,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
       MatChipsModule,
       MatTooltipModule,
       MatTableModule,
-      MatPaginatorModule
+      MatPaginatorModule,
+      FlexLayoutModule,
+      MatCardModule
   ]
 })
 export class AppMaterialModule { }

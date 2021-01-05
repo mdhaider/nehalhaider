@@ -1,15 +1,25 @@
-<!--<angular-file-uploader
-      [config]="afuConfig">
-</angular-file-uploader>
--->
 
 <h1>Courses</h1>
 
-  <ol>
-    <li *ngFor="let items of data">
-     <a href="{{items.link}}">{{items.title}}</a>
-    </li>
-  </ol>
-   
- 
-<ng-template #noData>No Data Available</ng-template>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of data; index as i">
+      <mat-card class="mat-elevation-z2">
+        <mat-card-header>
+          <mat-card-title>{{num.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="./../assets/images/img4.jpg">
+        <mat-card-content>
+          <p>
+           {{num.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="openDoc(i)" mat-button>PREVIEW</button>
+          <button (click)="downloadPdf(i)" mat-button>DOWNLOAD</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
