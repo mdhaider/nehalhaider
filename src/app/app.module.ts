@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +11,11 @@ import { UploadComponent } from './upload/upload.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LearningsComponent } from './learnings/learnings.component';
 import { BitsComponent } from './bits/bits.component';
+
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { BitsComponent } from './bits/bits.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularFileUploaderModule,
-    AppMaterialModule
+    AppMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

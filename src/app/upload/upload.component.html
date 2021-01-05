@@ -1,5 +1,30 @@
+<!-- wrapper -->
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+      <!-- Title -->
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Title" formControlName="title">
+        <!-- error -->
+        <mat-error *ngIf="errorHandling('title', 'required')">
+          You must provide a<strong> title</strong>
+        </mat-error>
+      </mat-form-field>
 
+      <!-- Description -->
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Add description" formControlName="description">
+        <!-- error -->
+        <mat-error *ngIf="errorHandling('description', 'required')">
+          You must provide a<strong> description</strong>
+        </mat-error>
+      </mat-form-field>
 
+      <!-- Submit -->
+      <div class="button-wrapper">
+        <button mat-flat-button color="primary">Submit</button>
+      </div>
 
-
-<button (click)= "saveData()">Upload Data</button>
+    </form>
+  </mat-sidenav-content>
+</mat-sidenav-container>

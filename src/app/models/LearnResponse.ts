@@ -1,6 +1,6 @@
 import { Learns } from "./Learns";
 
-export class LearnResponse{
+export class LearnResponse {
     results: Learns[];
 
     constructor(res:any){

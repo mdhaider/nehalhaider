@@ -6,6 +6,7 @@ export class Learns {
 	 learnId : number;
 	 createdAt : string;
 	 updatedAt : string;
+	 pdfFile:string;
 
 	 constructor(learns: any) {
 		 this.objectId= learns.objectId;
@@ -15,5 +16,6 @@ export class Learns {
 		 this.description= learns.description;
 		 this.createdAt= learns.createdAt;
 		 this.updatedAt= learns.updatedAt;
+		 this.pdfFile= learns.pdfFile
 	 }
 }

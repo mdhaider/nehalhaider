@@ -1,14 +1,10 @@
 export class LearnRequest{
     title?:string;
-    linkToPdf?:string;
     description?:string;
-    learnId?:number;
-
-    constructor(title: string, linkToPdf: string, description:string,learnId:number  ){
-        this.linkToPdf=title;
+   
+    constructor(title: string, description:string){
         this.title=title;
         this.description=description;
-        this.learnId=learnId;
     }
 
 }
