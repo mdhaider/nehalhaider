@@ -24,7 +24,7 @@ export class LearningsComponent implements OnInit {
     this.gridColumns = this.gridColumns === 3 ? 4 : 3;
   }
 
-  goToDownload(i) {
+  goToDownload(i:any) {
     this.data[0].docFile.url;
     console.log(this.data[i].docFile.url);
   }
