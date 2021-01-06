@@ -1,0 +1,14 @@
+<h1>Questions</h1>
+
+  <mat-list>
+    <mat-list-item *ngFor="let message of data; index as i">
+      
+        <h3 matLine>  {{message.question}} </h3>
+     
+      <p matLine>
+        <span> {{message.language}} </span>
+        <span class="demo-2"> -- {{message.level}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+

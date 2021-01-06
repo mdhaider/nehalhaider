@@ -16,6 +16,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { InterviewComponent } from './interview/interview.component';
+import { QuestionListComponent } from './question-list/question-list.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { InterviewComponent } from './interview/interview.component';
     NavbarComponent,
     LearningsComponent,
     BitsComponent,
-    InterviewComponent
+    InterviewComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
