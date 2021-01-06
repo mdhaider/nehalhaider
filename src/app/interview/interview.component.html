@@ -1,0 +1,78 @@
+<h1>Upload interview question</h1>
+
+<!-- wrapper -->
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+      <!-- Question -->
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Question" formControlName="question" />
+        <!-- error -->
+        <mat-error *ngIf="errorHandling('question', 'required')">
+          You must provide a<strong> question</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Answer -->
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Answer" formControlName="answer" />
+      </mat-form-field>
+
+      <!-- Language -->
+      <mat-form-field>
+        <mat-label>Language</mat-label>
+        <mat-select [(value)]="selected" formControlName="language">
+          <mat-option [value]="gradeArray" *ngFor="let gradeArray of GradeArray"
+            >{{ gradeArray }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Level -->
+      <div class="misc-bottom-padding">
+        <mat-label>Difficulty Level:</mat-label>
+        <mat-radio-group aria-label="Select an option" formControlName="level">
+          <mat-radio-button value="basic">Basic</mat-radio-button>
+          <mat-radio-button value="intermediate">Intermediate</mat-radio-button>
+          <mat-radio-button value="expert">Expert</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <!-- Add Subjects -->
+      <mat-form-field class="multiple-items">
+        <mat-chip-list #chipList>
+          <mat-chip
+            *ngFor="let subjectsArray of SubjectsArray"
+            [selectable]="selectable"
+            [removable]="removable"
+            (removed)="remove(subjectsArray)"
+          >
+            {{ subjectsArray.name }}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input
+            placeholder="Add tags"
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)"
+          />
+        </mat-chip-list>
+      </mat-form-field>
+
+      <!-- Submit -->
+      <div class="button-wrapper">
+        <button mat-flat-button color="primary" [disabled]="myForm.invalid">
+          Submit
+        </button>
+      </div>
+
+      <!-- Reset -->
+      <div class="button-wrapper">
+        <button mat-flat-button color="primary" (click)="myForm.reset()">
+          Reset
+        </button>
+      </div>
+    </form>
+  </mat-sidenav-content>
+</mat-sidenav-container>

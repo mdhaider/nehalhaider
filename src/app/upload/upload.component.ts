@@ -60,15 +60,15 @@ export class UploadComponent {
       next: (result: any) => {
         console.log(result);
         console.log('result', result);
-        this.reset();
+        this.myForm.reset();
       },
       error: (err: any) => {
         console.log(err);
-        this.reset();
+        this.myForm.reset();
       },
       complete: () => {
         console.log('complete');
-        this.reset();
+        this.myForm.reset();
       },
     });
   }

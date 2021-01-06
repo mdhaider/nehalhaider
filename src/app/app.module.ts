@@ -15,6 +15,7 @@ import { BitsComponent } from './bits/bits.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { InterviewComponent } from './interview/interview.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     UploadComponent,
     NavbarComponent,
     LearningsComponent,
-    BitsComponent
+    BitsComponent,
+    InterviewComponent
   ],
   imports: [
     BrowserModule,
