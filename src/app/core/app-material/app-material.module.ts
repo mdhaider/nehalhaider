@@ -19,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatCardModule} from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MatCardModule} from '@angular/material/card';
     MatTableModule,
     MatPaginatorModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule
   ],
   exports:[
     MatButtonModule,
@@ -63,7 +65,8 @@ import { MatCardModule} from '@angular/material/card';
       MatTableModule,
       MatPaginatorModule,
       FlexLayoutModule,
-      MatCardModule
+      MatCardModule,
+      MatMenuModule
   ]
 })
 export class AppMaterialModule { }
