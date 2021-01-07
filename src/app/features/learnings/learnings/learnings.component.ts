@@ -16,7 +16,7 @@ export class LearningsComponent implements OnInit {
 
   title = 'Card View Demo';
 
-  gridColumns = 2;
+  gridColumns = 4;
   url:string="";
   name:string=""
 
