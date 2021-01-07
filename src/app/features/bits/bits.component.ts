@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LearningsService } from '../learnings.service';
-import { LearnResponse } from '../models/LearnResponse';
+import { LearningsService } from '../learnings/learnings.service';
+import { LearnResponse } from '../../shared/LearnResponse';
 
 
 @Component({

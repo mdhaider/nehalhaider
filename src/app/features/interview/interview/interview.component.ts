@@ -3,7 +3,7 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { InterviewService } from '../interview.service';
-import { InterviewRequest } from '../models/InterviewRequest';
+import { InterviewRequest } from '../../../shared/InterviewRequest';
 
 export interface Subject {
   name: string;

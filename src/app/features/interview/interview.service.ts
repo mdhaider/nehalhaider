@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { InterviewRequest } from '../app/models/InterviewRequest';
+import { InterviewRequest } from '../../shared/InterviewRequest';
 
 const httpHeaders = new HttpHeaders({
   'content-type': 'application/json',

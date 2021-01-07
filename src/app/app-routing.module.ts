@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BitsComponent } from './bits/bits.component';
-import { HomeComponent } from './home/home.component';
-import { InterviewComponent } from './interview/interview.component';
-import { LearningsComponent } from './learnings/learnings.component';
-import { QuestionListComponent } from './question-list/question-list.component';
-import { UploadComponent } from './upload/upload.component';
+import { BitsComponent } from './features/bits/bits.component';
+import { HomeComponent } from './features/home/home.component';
+import { InterviewComponent } from './features/interview/interview/interview.component';
+import { LearningsComponent } from './features/learnings/learnings/learnings.component';
+import { QuestionListComponent } from './features/question-list/question-list.component';
+import { UploadComponent } from './features/upload/upload.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},

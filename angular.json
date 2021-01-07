@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "nehalhaider"
+  "defaultProject": "nehalhaider",
+  "cli": {
+    "analytics": "e9b7716a-2d4b-4315-9a74-b91174c93fb6"
+  }
 }

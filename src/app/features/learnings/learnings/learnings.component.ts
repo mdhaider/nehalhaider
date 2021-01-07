@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LearningsService } from '../learnings.service';
-import { LearnResponse } from '../models/LearnResponse';
+import { LearnResponse } from '../../../shared/LearnResponse';
 
 declare var require: any
 const FileSaver = require('file-saver');

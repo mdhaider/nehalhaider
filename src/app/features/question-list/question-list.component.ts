@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InterviewService } from '../interview.service';
-import { InterviewResponse } from '../models/InterviewResponse';
+import { InterviewService } from '../interview/interview.service';
+import { InterviewResponse } from '../../shared/InterviewResponse';
 
 @Component({
   selector: 'app-question-list',

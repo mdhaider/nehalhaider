@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LearnRequest } from '../app/models/LearnRequest';
+import { LearnRequest } from '../../shared/LearnRequest';
 
 const httpHeaders = new HttpHeaders({
   'content-type': 'application/json',

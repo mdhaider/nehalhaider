@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { LearningsService } from '../learnings.service';
-import { LearnRequest } from '../models/LearnRequest';
+import { LearnRequest } from '../../shared/LearnRequest';
+import { LearningsService } from '../learnings/learnings.service'
 
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
