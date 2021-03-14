@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InterviewComponent } from './features/interview/interview/interview.component';
 import { QuestionListComponent } from './features/question-list/question-list.component';
 import { ResponsiveToolbarComponent } from './features/responsive-toolbar/responsive-toolbar.component';
+import { HomeNewComponent } from './features/homenew/home-new.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ResponsiveToolbarComponent } from './features/responsive-toolbar/respon
     BitsComponent,
     InterviewComponent,
     QuestionListComponent,
-    ResponsiveToolbarComponent
+    ResponsiveToolbarComponent,
+    HomeNewComponent
   ],
   imports: [
     BrowserModule,

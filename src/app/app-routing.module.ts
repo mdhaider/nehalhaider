@@ -6,8 +6,10 @@ import { InterviewComponent } from './features/interview/interview/interview.com
 import { LearningsComponent } from './features/learnings/learnings/learnings.component';
 import { QuestionListComponent } from './features/question-list/question-list.component';
 import { UploadComponent } from './features/upload/upload.component';
+import { HomeNewComponent } from './features/homenew/home-new.component';
 
 const routes: Routes = [
+  {path:'', component: HomeNewComponent},
   {path:'', component: HomeComponent},
   {path:'interview', component: QuestionListComponent},
   {path:'learnings', component: LearningsComponent},
